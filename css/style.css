@@ -1,0 +1,99 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 { color: beige;}
+
+/* class */
+
+.pink {color:black; text-align: center;}
+
+.gray {color:beige;text-align: center;
+    margin-bottom: 50px;}
+
+/* id */
+
+#blue {color: blue; text-align: center;}
+
+
+.caja{
+    background-color: blueviolet;
+    width: 150px;
+    height: 150px;
+    padding: 50px;
+}
+
+header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    border-radius: 200px;
+    background-color: gray;
+    padding: 8px;
+    box-shadow: 10px 10px 20px black;
+}
+
+/*flex*/
+.contenedor {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center ;
+
+}
+
+
+.contenedor .items {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+
+}
+
+/*grid*/
+.contenedor1 {
+    background-color: blue;
+    margin-top: 300px;
+    margin: 30;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 30px 10px;
+
+
+}
+
+.contenedor1 .items {
+    border: 2px solid black;
+
+}
+
+.ejemplo {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.ejemplo .div-uno {
+    justify-self: start;
+    align-self: end;
+}
