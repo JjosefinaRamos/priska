@@ -1,0 +1,58 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+@import "../base/class";
+
+/* estilos generales */
+h1 { 
+    font-family:"Roboto", sans-serif;
+    color: $color-principal;
+    letter-spacing: 7px;
+    font-size: 2.5rem;
+    @include texto
+} 
+
+h2 {
+    font-family:"Roboto", sans-serif;
+    font-weight: 600;
+    color: $color-secundario;
+    font-size: 2rem;
+    margin: 2rem 2rem;
+    @include texto
+}
+
+h3 {
+    font-family:"Roboto", sans-serif;
+    font-weight: 600;
+    color: $color-secundario;
+    font-size: 1.5rem;
+    padding: 30px;
+    @include texto
+}
+
+h4 {
+    font-family:"Roboto", sans-serif;
+    font-weight: 400;
+    color: $color-terciario;
+    font-size: 1rem;
+    padding: 20px;
+    @include texto
+}
+
+p {
+    font-family:"Roboto", sans-serif;
+    font-weight: 400;
+    color: $color-secundario;
+    font-size: 1.1rem;
+    margin: 20px;
+    @include texto
+}
+
+a {
+    color: $color-principal;
+    font-family:"Roboto", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    @include texto
+}
+

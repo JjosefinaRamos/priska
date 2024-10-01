@@ -1,0 +1,28 @@
+//mixin con parametros
+
+@mixin tamaño ($width, $heigth) {
+    width: $width;
+    height: $heigth;
+}
+
+@mixin grid($columns,$rows) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: $rows;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin texto {
+    text-align: center;
+    justify-content: center;
+}

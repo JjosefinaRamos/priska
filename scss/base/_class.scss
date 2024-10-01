@@ -1,0 +1,93 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+/* class */
+
+.boton {
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 100px;
+    background-color: $color-terciario;
+    padding: 5px;
+    box-shadow: 10px 10px 20px $color-secundario;
+}
+
+.contenedor2 {
+    align-items: center;
+    gap: 20px;
+    @include flex-column
+}
+
+.contenedor2 img {
+    width: 10rem;
+    height: auto;
+}
+
+.contenedor2 p {
+    margin: 0;
+}
+
+.section1{
+    column-gap: 1.5rem;
+    @include grid (1, auto) 
+}
+
+.contenedor3 {
+    align-items: center;
+    gap: 1rem;
+    @include flex-column
+}
+
+.contenedor3 img {
+    width: 70%;
+    height: auto;
+}
+
+.contenedor3 p {
+    margin: 0;
+}
+
+.img-sect {
+    column-gap: 1px;
+    justify-content: center;
+    @include grid (3, auto)
+}
+
+.img-sect img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-sect2 {
+    column-gap: 1rem;
+    row-gap: 1rem;
+    place-items: center;
+    @include grid (1, auto)
+}
+
+.img-sect2 img {
+    display: grid;
+    width: 75%;
+    height: auto;
+    text-align: center;
+}
+
+.footer-img {
+    display: flex;
+    text-align: center;
+}
+
+.footer-img img {
+    width: 10%;
+    height: auto;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.mapa-ubi {
+    width: 75%;
+    height: auto;
+    justify-content: center;
+}
