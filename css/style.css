@@ -70,9 +70,9 @@ body {
 }
 
 .img-sect img {
+  object-fit: cover;
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .img-sect2 {
@@ -86,9 +86,9 @@ body {
 
 .img-sect2 img {
   display: grid;
+  text-align: center;
   width: 75%;
   height: auto;
-  text-align: center;
 }
 
 .footer-img {
@@ -97,16 +97,16 @@ body {
 }
 
 .footer-img img {
-  width: 10%;
-  height: auto;
   object-fit: cover;
   justify-content: center;
+  width: 10%;
+  height: auto;
 }
 
 .mapa-ubi {
+  justify-content: center;
   width: 75%;
   height: auto;
-  justify-content: center;
 }
 
 /* estilos generales */
@@ -133,7 +133,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding: 30px;
   text-align: center;
   justify-content: center;
@@ -166,6 +166,134 @@ a {
   text-decoration: none;
   text-align: center;
   justify-content: center;
+}
+
+/* estilos header */
+header {
+  background-color: black;
+  padding: 25px;
+}
+header nav ul {
+  color: rgb(255, 249, 242);
+  list-style: none;
+  margin-top: 2rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 1px;
+}
+header nav ul li {
+  color: rgb(255, 249, 242);
+  display: inline-block;
+  margin-left: 0.5rem;
+  border-radius: 100px;
+  background-color: rgb(153, 153, 153);
+  padding: 5px;
+}
+
+/* estilos main */
+main section {
+  padding: 30px;
+  text-align: center;
+}
+main section div {
+  padding: 30px;
+  text-align: center;
+}
+
+main .img-uno, main .img-dos {
+  display: none;
+}
+/* estilos footer */
+footer {
+  width: 100%;
+  background-color: rgb(153, 153, 153);
+  padding: 30px;
+}
+
+/* estilos formularios */
+main section form {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+main section form div label {
+  display: block;
+  justify-content: left;
+  align-items: center;
+}
+main section form div label input, main section form div label textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 100%;
+  font-size: 1rem;
+}
+main section form div label input button, main section form div label textarea button {
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 100px;
+  background-color: rgb(153, 153, 153);
+  padding: 5px;
+  box-shadow: 10px 10px 20px black;
+}
+
+/* estilo media query tablet */
+@media screen and (min-width: 600px) {
+  main .img-dos {
+    display: block;
+  }
+  main .img-sect {
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  main .section1 {
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  main .img-sect2 {
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+/* estilo media query desktop */
+@media screen and (min-width: 1024px) {
+  main .img-uno, main .img-dos {
+    display: block;
+  }
+  main .img-sect {
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  main .section1 {
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  main .img-sect2 {
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

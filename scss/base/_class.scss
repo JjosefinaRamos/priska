@@ -20,8 +20,7 @@
 }
 
 .contenedor2 img {
-    width: 10rem;
-    height: auto;
+    @include tamaño (10rem, auto)
 }
 
 .contenedor2 p {
@@ -40,8 +39,7 @@
 }
 
 .contenedor3 img {
-    width: 70%;
-    height: auto;
+    @include tamaño (70%, auto)
 }
 
 .contenedor3 p {
@@ -55,9 +53,8 @@
 }
 
 .img-sect img {
-    width: 100%;
-    height: auto;
     object-fit: cover;
+    @include tamaño (100%, auto)
 }
 
 .img-sect2 {
@@ -69,9 +66,8 @@
 
 .img-sect2 img {
     display: grid;
-    width: 75%;
-    height: auto;
     text-align: center;
+    @include tamaño (75%, auto)
 }
 
 .footer-img {
@@ -80,14 +76,12 @@
 }
 
 .footer-img img {
-    width: 10%;
-    height: auto;
     object-fit: cover;
     justify-content: center;
+    @include tamaño (10%, auto)
 }
 
 .mapa-ubi {
-    width: 75%;
-    height: auto;
     justify-content: center;
+    @include tamaño (75%, auto)
 }

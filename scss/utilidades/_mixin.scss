@@ -11,6 +11,12 @@
     grid-template-rows: $rows;
 }
 
+@mixin grid-rep ($columns,$rows) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}
+
 @mixin flex {
     display: flex;
     justify-content: center;

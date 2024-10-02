@@ -25,7 +25,7 @@ h3 {
     font-family:"Roboto", sans-serif;
     font-weight: 600;
     color: $color-secundario;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding: 30px;
     @include texto
 }
@@ -56,3 +56,160 @@ a {
     @include texto
 }
 
+/* estilos header */
+header {
+    background-color: $color-secundario;
+    padding: 25px;
+    nav {
+        ul {
+            color: $color-principal;
+            list-style: none;
+            margin-top: 2rem;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            gap: 1px;
+            li {
+                color: $color-principal;
+                display: inline-block;
+                margin-left: 0.5rem;
+                border-radius: 100px;
+                background-color: $color-terciario;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+/* estilos main */
+main {
+    section {
+        padding: 30px;
+        text-align: center;
+        div {
+            padding: 30px;
+            text-align: center;
+            }
+        }
+    }
+
+main {
+    .img-uno {
+        display: none;
+    }
+    .img-dos {
+        @extend .img-uno
+    }
+}
+
+
+/* estilos footer */
+footer {
+    width: 100%;
+    background-color: $color-terciario;
+    padding: 30px;
+}
+
+
+/* estilos formularios */
+main {
+    section {
+        form {
+            font-family:"Roboto", sans-serif;
+            font-weight: 400;
+            color: $color-terciario;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            div {
+                label {
+                    display: block;
+                    justify-content: left;
+                    align-items: center;
+                    input, textarea {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid $color-terciario;
+                        border-radius: 100%;
+                        font-size: 1rem;
+                        button {
+                            display: inline-block;
+                            margin-top: 2rem;
+                            border-radius: 100px;
+                            background-color: $color-terciario;
+                            padding: 5px;
+                            box-shadow: 10px 10px 20px $color-secundario;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* estilo media query tablet */
+@media screen and (min-width:600px) {
+    main {
+        .img-dos {
+            display: block;
+        }
+    }
+
+    main {
+        .img-sect {
+            column-gap: 1.5rem;
+            @include grid-rep (4, 1)
+        }
+    }
+
+    main {
+        .section1 {
+            column-gap: 1.5rem;
+            @include grid (2, auto)
+        }
+    }
+
+    main {
+        .img-sect2 {
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            justify-content: space-between;
+            @include grid (2, auto)
+        }
+}
+}
+
+/* estilo media query desktop */
+@media screen and (min-width:1024px) {
+    main {
+        .img-uno, .img-dos {
+            display: block;
+        }
+    } 
+
+    main {
+        .img-sect {
+            column-gap: 1.5rem;
+            @include grid-rep (5, 1)
+        }
+    }
+
+
+    main {
+        .section1 {
+            column-gap: 1.5rem;
+            @include grid (3, auto)
+        }
+    } 
+
+    main{
+        .img-sect2 {
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            justify-content: space-between;
+            @include grid (4, auto)
+        }
+    }
+}
