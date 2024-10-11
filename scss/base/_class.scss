@@ -11,11 +11,29 @@
     background-color: $color-terciario;
     padding: 5px;
     box-shadow: 10px 10px 20px $color-secundario;
+    transition: 1s;
+    &:hover {
+        background-color: $color-secundario;
+        transition: 1s;
+    }
 }
 
+.boton2{
+    @extend .boton;
+    color: $color-principal;
+    font-family:"Roboto", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin-top: 0;
+    border: none;
+    @include texto
+}
 .contenedor2 {
     align-items: center;
-    gap: 20px;
+    gap: 4px;
+    border: 0.3px solid $color-terciario;
+    border-radius: 30px;
+    margin: 0px;
     @include flex-column
 }
 
@@ -25,6 +43,7 @@
 
 .contenedor2 p {
     margin: 0;
+    margin-top: 15px;
 }
 
 .section1{
@@ -35,6 +54,9 @@
 .contenedor3 {
     align-items: center;
     gap: 1rem;
+    border: 0.3px solid $color-terciario;
+    border-radius: 50px;
+    margin: 20px;
     @include flex-column
 }
 
@@ -84,4 +106,57 @@
 .mapa-ubi {
     justify-content: center;
     @include tamaño (75%, auto)
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+
+    input[type="search"] {
+        padding: 10px;
+        border: 0.5px solid $color-terciario;
+        border-radius: 100px;
+        margin-right: 5px;
+        font-size: 1rem;
+        width: 18rem;
+        height: 35px;
+
+        &:focus {
+            border-color: $color-secundario;
+            outline: none; 
+        }
+    }
+}
+
+
+.form {
+    font-family:"Roboto", sans-serif;
+    font-weight: 400;
+    color: $color-terciario;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.label {
+    display: block;
+    justify-content: left;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.input {
+    padding: 10px;
+    border: 0.5px solid $color-terciario;
+    border-radius: 100px;
+    margin-right: 5px;
+    font-size: 1rem;
+    width: 18rem;
+    height: 35px;
+}
+
+.textarea {
+    border-radius: 20px;
+    font-size: 1rem;
 }

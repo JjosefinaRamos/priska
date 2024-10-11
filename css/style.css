@@ -13,18 +13,37 @@ body {
 }
 
 /* class */
-.boton {
+.boton, .boton2 {
   display: inline-block;
   margin-top: 2rem;
   border-radius: 100px;
   background-color: rgb(153, 153, 153);
   padding: 5px;
   box-shadow: 10px 10px 20px black;
+  transition: 1s;
+}
+.boton:hover, .boton2:hover {
+  background-color: black;
+  transition: 1s;
+}
+
+.boton2 {
+  color: rgb(255, 249, 242);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 0;
+  border: none;
+  text-align: center;
+  justify-content: center;
 }
 
 .contenedor2 {
   align-items: center;
-  gap: 20px;
+  gap: 4px;
+  border: 0.3px solid rgb(153, 153, 153);
+  border-radius: 30px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -36,6 +55,7 @@ body {
 
 .contenedor2 p {
   margin: 0;
+  margin-top: 15px;
 }
 
 .section1 {
@@ -48,6 +68,9 @@ body {
 .contenedor3 {
   align-items: center;
   gap: 1rem;
+  border: 0.3px solid rgb(153, 153, 153);
+  border-radius: 50px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -109,12 +132,80 @@ body {
   height: auto;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+.search-container input[type=search] {
+  padding: 10px;
+  border: 0.5px solid rgb(153, 153, 153);
+  border-radius: 100px;
+  margin-right: 5px;
+  font-size: 1rem;
+  width: 18rem;
+  height: 35px;
+}
+.search-container input[type=search]:focus {
+  border-color: black;
+  outline: none;
+}
+
+.form {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.label {
+  display: block;
+  justify-content: left;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: 0.5px solid rgb(153, 153, 153);
+  border-radius: 100px;
+  margin-right: 5px;
+  font-size: 1rem;
+  width: 18rem;
+  height: 35px;
+}
+
+.textarea {
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
 /* estilos generales */
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  25% {
+    color: rgb(255, 249, 242);
+  }
+  50% {
+    color: rgb(153, 153, 153);
+  }
+  75% {
+    color: rgb(67, 67, 67);
+  }
+  100% {
+    color: rgb(19, 19, 19);
+  }
+}
 h1 {
   font-family: "Roboto", sans-serif;
   color: rgb(255, 249, 242);
   letter-spacing: 7px;
   font-size: 2.5rem;
+  animation: colorChange 5s infinite;
   text-align: center;
   justify-content: center;
 }
@@ -141,7 +232,7 @@ h3 {
 
 h4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(153, 153, 153);
   font-size: 1rem;
   padding: 20px;
@@ -152,7 +243,7 @@ h4 {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: black;
+  color: rgb(153, 153, 153);
   font-size: 1.1rem;
   margin: 20px;
   text-align: center;
@@ -166,6 +257,13 @@ a {
   text-decoration: none;
   text-align: center;
   justify-content: center;
+}
+
+option {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: rgb(153, 153, 153);
+  font-size: 1rem;
 }
 
 /* estilos header */
@@ -189,6 +287,11 @@ header nav ul li {
   border-radius: 100px;
   background-color: rgb(153, 153, 153);
   padding: 5px;
+  transition: 1s;
+}
+header nav ul li:hover {
+  background-color: black;
+  transition: 1s;
 }
 
 /* estilos main */
@@ -212,35 +315,15 @@ footer {
 }
 
 /* estilos formularios */
-main section form {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: rgb(153, 153, 153);
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px;
-}
-main section form div label {
-  display: block;
-  justify-content: left;
+main section form div {
+  justify-content: flex-start;
   align-items: center;
-}
-main section form div label input, main section form div label textarea {
+  margin: 0 auto;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid rgb(153, 153, 153);
-  border-radius: 100%;
-  font-size: 1rem;
-}
-main section form div label input button, main section form div label textarea button {
-  display: inline-block;
-  margin-top: 2rem;
-  border-radius: 100px;
-  background-color: rgb(153, 153, 153);
-  padding: 5px;
-  box-shadow: 10px 10px 20px black;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* estilo media query tablet */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="Accede a tu cuenta para registrarte o iniciar sesión y gestionar tus compras. Encuentra toda la información de tus pedidos, haz seguimiento de envíos y disfruta de una experiencia personalizada. ¡Tu tienda al alcance de un clic!">
     <title>Mi cuenta</title>
 </head>
 <body>
@@ -21,51 +22,73 @@
     </header>
     <main>
         <section>
+            <h2>Iniciar Sesión</h2>
+            <form class="form" action="">
+                <div>
+                    <label class="label" for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label class="label" for="contrasena">Contraseña</label>
+                    <input class="input" type="password" name="contrasena" id="contrasena">
+                </div>
+                <div>
+                    <a class="boton" href="../index.html">Iniciar Sesión</a>
+                </div>
+            </form>
+
             <h2>Crear cuenta</h2>
-            <form action="">
+            <form class="form" action="">
                 <div>
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" name="nombre" id="nombre">
+                    <label class="label" for="nombre">Nombre y Apellido</label>
+                    <input class="input" type="text" name="nombre" id="nombre">
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <label class="label" for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email">
                 </div>
                 <div>
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" name="contrasena" id="contrasena">
+                    <label class="label" for="contrasena">Contraseña</label>
+                    <input class="input" type="password" name="contrasena" id="contrasena">
                 </div>
                 <div>
-                    <label for="contrasena">Repetir Contraseña</label>
-                    <input type="password" name="contrasena" id="contrasena">
+                    <label class="label" for="contrasena">Repetir Contraseña</label>
+                    <input class="input" type="password" name="contrasena" id="contrasena">
                 </div>
                 <div>
-                    <label for="">Genero</label>
-                    <label for="femenino">Femenino</label>
-                    <input type="radio" name="genero">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" name="genero">
-                    <label for="otro">Otro</label>
-                    <input type="radio" name="genero">
+                    <div>
+                        <label class="label" for="">Genero</label>
+                    </div>
+                    <div>
+                        <label class="label" for="femenino">Femenino</label>
+                        <input type="radio" name="genero">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="genero">
+                        <label for="otro">Otro</label>
+                        <input type="radio" name="genero">
+                    </div>
                 </div>
                 <div>
-                    <label for="">Dirección</label>
-                    <input type="text" name="direccion" id="direccion">
+                    <label class="label" for="">Dirección</label>
+                    <input class="input" type="text" name="direccion" id="direccion">
                 </div>
                 <div>
-                    <label for="">Barrio</label>
-                    <input type="text" name="barrio" id="barrio">
+                    <label class="label" for="">Barrio</label>
+                    <input class="input" type="text" name="barrio" id="barrio">
                 </div>
                 <div>
-                    <label for="">Pais</label>
-                        <select name="" id="">
+                    <label class="label" for="">Pais</label>
+                        <select class="input" name="" id="">
                             <option value="">Argentina</option>
                             <option value="">Brasil</option>
                             <option value="">Chile</option>
                             <option value="">Uruguay</option>
                             <option value="">Paraguay</option>
-                </select>
-            </div>
+                        </select>
+                </div>
+                <div>
+                    <a class="boton" href="../index.html">Crear Cuenta</a>
+                </div>
             </form>
         </section>
     </main>

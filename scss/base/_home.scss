@@ -4,11 +4,20 @@
 @import "../base/class";
 
 /* estilos generales */
+@keyframes colorChange {
+    0% { color:white }
+    25% { color: $color-principal ; }
+    50% {color: $color-terciario }
+    75% { color: rgb(67, 67, 67)  ; }
+    100% { color:rgb(19, 19, 19); }
+}
+
 h1 { 
     font-family:"Roboto", sans-serif;
     color: $color-principal;
     letter-spacing: 7px;
     font-size: 2.5rem;
+    animation: colorChange 5s infinite;
     @include texto
 } 
 
@@ -32,7 +41,7 @@ h3 {
 
 h4 {
     font-family:"Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: $color-terciario;
     font-size: 1rem;
     padding: 20px;
@@ -42,7 +51,7 @@ h4 {
 p {
     font-family:"Roboto", sans-serif;
     font-weight: 400;
-    color: $color-secundario;
+    color: $color-terciario;
     font-size: 1.1rem;
     margin: 20px;
     @include texto
@@ -54,6 +63,13 @@ a {
     font-weight: 400;
     text-decoration: none;
     @include texto
+}
+
+option {
+    font-family:"Roboto", sans-serif;
+    font-weight: 300;
+    color: $color-terciario;
+    font-size: 1rem;
 }
 
 /* estilos header */
@@ -76,6 +92,11 @@ header {
                 border-radius: 100px;
                 background-color: $color-terciario;
                 padding: 5px;
+                transition: 1s;
+                &:hover {
+                    background-color: $color-secundario;
+                    transition: 1s;
+                }
             }
         }
     }
@@ -115,35 +136,13 @@ footer {
 main {
     section {
         form {
-            font-family:"Roboto", sans-serif;
-            font-weight: 400;
-            color: $color-terciario;
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
             div {
-                label {
-                    display: block;
-                    justify-content: left;
-                    align-items: center;
-                    input, textarea {
-                        width: 100%;
-                        padding: 10px;
-                        margin-bottom: 15px;
-                        border: 1px solid $color-terciario;
-                        border-radius: 100%;
-                        font-size: 1rem;
-                        button {
-                            display: inline-block;
-                            margin-top: 2rem;
-                            border-radius: 100px;
-                            background-color: $color-terciario;
-                            padding: 5px;
-                            box-shadow: 10px 10px 20px $color-secundario;
-                        }
-                    }
-                }
+                justify-content: flex-start;
+                align-items: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 400px;
+                @include flex
             }
         }
     }
@@ -178,7 +177,7 @@ main {
             justify-content: space-between;
             @include grid (2, auto)
         }
-}
+    }
 }
 
 /* estilo media query desktop */
